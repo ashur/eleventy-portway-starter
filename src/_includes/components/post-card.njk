@@ -1,0 +1,21 @@
+<article class="[][ font-sans stack ][ post-card ]">
+	<a href="{{ post.permalink }}">
+		<div
+			class="[][ block ][ post-card-image {{ 'no-image' if not post.image }} ]"
+			role="img"
+			{% if post.image %}
+			aria-label="{{ post.image.description }}"
+			style="background-image: url( {{ post.image.src }} )"
+			{% endif %}
+		></div>
+	</a>
+
+	<div class="[ stack-sm ][][]">
+		<a href="{{ post.permalink }}" class="[ stack-sm ][ block no-underline ][]">
+			<h2 class="[][][ post-title ]">{{ post.name }}</h2>
+			<p class="[][ color-gray-dark ][]">{{ post.excerpt | truncate( 140 ) }}</p>
+		</a>
+
+		{% include "components/post-metadata.njk" %}
+	</div>
+</article>

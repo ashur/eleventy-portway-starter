@@ -1,0 +1,84 @@
+.bg-black {
+	background-color: var( --color-black );
+}
+
+.block {
+	display: block;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.color-gray-light {
+	color: var( --color-gray-light );
+}
+.color-gray {
+	color: var( --color-gray );
+}
+.color-gray-dark {
+	color: var( --color-gray-dark );
+}
+.color-white {
+	color: var( --color-white );
+}
+
+.container {
+	--padding-inline: var( --s1 );
+	--padding-block: var( --s1 );
+
+	width: 100%;
+	max-width: var( --container-width );
+	padding: var( --padding-block ) var( --padding-inline );
+}
+
+.flex {
+	display: flex;
+}
+
+.font-sm {
+	font-size: calc( var( --s0 ) * 0.8125 );
+}
+.font-1 {
+	font-size: var( --s1 );
+}
+.font-2 {
+	font-size: var( --s2 );
+}
+.font-3 {
+	font-size: var( --s3 );
+}
+.font-sans {
+	font-family: var( --font-sans );
+}
+.font-serif {
+	font-family: var( --font-serif );
+}
+
+.grid {
+	display: grid;
+}
+
+.line-1 {
+	line-height: 1;
+}
+
+.no-underline,
+.no-underline a
+{
+	text-decoration: none !important;
+}
+
+.padding-0 {
+	padding: var( --s0 );
+}
+.padding-1 {
+	padding: var( --s1 );
+}
+.padding-2 {
+	padding: var( --s2 );
+}
+
+.uppercase {
+	text-transform: uppercase;
+}

@@ -1,0 +1,17 @@
+.center {
+	margin: 0 auto;
+}
+
+.measure {
+	max-width: var( --measure );
+}
+
+.stack-sm > * + * {
+	margin-top: var( --s-1 );
+}
+.stack > * + * {
+	margin-top: var( --s1 );
+}
+.stack-lg > * + * {
+	margin-top: var( --s2 );
+}

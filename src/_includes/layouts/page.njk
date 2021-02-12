@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+---
+<main
+	class="[][][ content ]"
+>
+	<div
+		class="[ stack-lg ][][ page-header ]"
+	>
+		<div
+			class="[ stack-sm ][ container center font-sans ][]"
+		>
+			<h1 class="[][ bold font-2 line-1 ][]">{{ title }}</h1>
+		</div>
+	</div>
+
+	<div
+		class="[ stack ][ container center measure font-sans ][ page-container page-contents ]"
+	>
+		{{ content | safe }}
+	</div>
+</main>

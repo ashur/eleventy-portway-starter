@@ -1,0 +1,11 @@
+{
+	"header": {
+		"background": "var( --color-black )",
+		"text": "var( --color-white )"
+	},
+	"footer": {
+		"background": "var( --color-black )",
+		"text": "var( --color-white )"
+	},
+	"icon": "whale.svg"
+}

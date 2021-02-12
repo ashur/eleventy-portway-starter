@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>{{ site.name }}</title>
+
+	{%- set css -%}
+		{% include "style/global.css" %}
+		{% include "style/composition.css" %}
+		{% include "style/utilities.css" %}
+		{% include "style/blocks.css" %}
+	{%- endset %}
+	<style>
+		{{ css | cssmin | safe }}
+
+		:root {
+			--theme-color-headerBackground: {{ theme.header.background }};
+			--theme-color-headerText: {{ theme.header.text }};
+			--theme-color-footerBackground: {{ theme.footer.background }};
+			--theme-color-footerText: {{ theme.footer.text }};
+			--theme-color-icon: var( --theme-color-headerText );
+			--theme-icon: url( /icons/{{ theme.icon }} );
+		}
+	</style>
+</head>
+
+<body>
+	<header class="[][][ header ]">
+		<nav
+			class="[ container center font-sm uppercase ][][]"
+		>
+			<ul class="[][][ nav-items ]">
+				<li>
+				{% set svg %}../../icons/{{ theme.icon }}{% endset %}
+				<a class="[][ no-underline ][ nav-icon ]" href="/">{% include svg %}</a></li>
+				{% for navItem in collections.pages %}
+				<li><a href="{{ navItem.url }}" class="{{ 'active' if navItem.url == page.url }}">{{ navItem.data.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</nav>
+	</header>
+
+	{{ content | safe }}
+
+	<footer
+		class="[][ bg-black font-sans ][ footer ]"
+	>
+		<div
+			class="[ container center font-sm ][][]"
+		>
+			<p class="color-gray-light">{{ site.name }}</p>
+		</div>
+	</footer>
+</body>
+</html>

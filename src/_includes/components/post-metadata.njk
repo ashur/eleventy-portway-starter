@@ -1,0 +1,9 @@
+<p class="[][ color-gray font-sm uppercase ][]">
+	{% if post.isPublished %}
+		{% date post.date %}
+	{% else %}
+		Unpublished
+	{% endif %}
+
+	{% if post.data.pinned %}<span class="[][][ post-pinned ]">Pinned</span>{% endif %}
+</p>

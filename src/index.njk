@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+---
+<main
+	class="[][][ content ]"
+>
+	<div
+		class="[ stack-lg ][][ page-header ]"
+	>
+		<div
+			class="[ stack-sm ][ container center ][]"
+		>
+			<h1 class="[][ bold font-2 line-1 ][ site-name ]">{{ site.name }}</h1>
+			<p class="[][ font-sm ][ site-description ]">{{ site.richDescription | safe }}</p>
+		</div>
+	</div>
+
+	<div
+		class="[ stack-lg ][ container center ][ page-container ]"
+	>
+		<div class="[][ grid ][ posts ]">
+		{% for post in posts -%}
+			{% include "components/post-card.njk" %}
+		{% endfor -%}
+		</div>
+	</div>
+</main>

@@ -1,0 +1,22 @@
+{
+  "name": "eleventy-portway-starter",
+  "version": "1.0.0",
+  "description": "A starter template for building a simple blog with Eleventy and Portway",
+  "author": "Ashur Cabrera",
+  "scripts": {
+    "build": "eleventy",
+    "clean": "rm -r ./.cache",
+    "serve": "eleventy --serve"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy-cache-assets": "^2.0.3",
+    "@11ty/eleventy-img": "^0.5.0",
+    "clean-css": "^5.0.1",
+    "dotenv": "^8.2.0",
+    "striptags": "^3.1.1"
+  },
+  "devDependencies": {}
+}

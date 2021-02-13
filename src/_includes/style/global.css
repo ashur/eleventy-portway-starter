@@ -8,7 +8,7 @@
 	--s3: calc( var( --s2 ) * var( --s-ratio ) );
 	--s4: calc( var( --s3 ) * var( --s-ratio ) );
 
-	--container-width: 72rem;
+	--container-width: 64rem;
 	--measure-default: 64ch;
 	--measure: var( --measure-default );
 

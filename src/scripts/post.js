@@ -48,12 +48,8 @@ class Post
 		let excerpt = this.data.excerpt;
 		if( !excerpt && content[0] )
 		{
-			excerpt = striptags(
-				md.render(
-					content[0]
-					.split( /[\.\n]/ )[0]
-				)
-			);
+			excerpt = striptags( this.html )
+				.split( /[\.\n]/ )[0];
 		}
 		this.excerpt = excerpt;
 

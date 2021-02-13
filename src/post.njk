@@ -8,6 +8,8 @@ pagination:
     addAllPagesToCollections: true
 eleventyComputed:
     title: "{{ post.name }}"
+    description: "{{ post.excerpt }}"
+    socialImage: "{{ post.image.src }}"
 permalink: "/{{ post.permalink }}/index.html"
 ---
 <main

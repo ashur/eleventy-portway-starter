@@ -4,7 +4,26 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
+	{% set pageTitle %}{% if title %}{{ title }} | {% endif %}{{ site.name }}{% endset %}
+	{% set pageDescription %}{{ description if description else (site.description | striptags ) }}{% endset %}
+	{% set pageUrl %}{{ site.url }}{{ page.url }}{% endset %}
+
+	<title>{{ pageTitle }}</title>
+
+	<meta name="title" content="{{ pageTitle }}">
+	<meta name="description" content="{{ pageDescription }}">
+
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="{{ pageUrl }}">
+	<meta property="og:title" content="{{ pageTitle }}">
+	<meta property="og:description" content="{{ pageDescription }}">
+	<meta property="og:image" content="{{ socialImage }}">
+
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="{{ pageUrl }}">
+	<meta property="twitter:title" content="{{ pageTitle }}">
+	<meta property="twitter:description" content="{{ pageDescription }}">
+	<meta property="twitter:image" content="{{ socialImage }}">
 
 	{%- set css -%}
 		{% include "style/global.css" %}

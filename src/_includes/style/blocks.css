@@ -116,10 +116,6 @@ body {
 		}
 	}
 
-.page-contents {
-	--padding-inline: 0;
-}
-
 .page-contents h2, .page-contents h3 {
 	line-height: 1;
 }
@@ -151,4 +147,3 @@ body {
 .page-contents ul li {
 	display: list-item;
 }
-

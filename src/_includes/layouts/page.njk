@@ -15,8 +15,10 @@ layout: layouts/base.njk
 	</div>
 
 	<div
-		class="[ stack ][ container center measure font-sans ][ page-container page-contents ]"
+		class="[ stack container ][ center ][ page-container page-contents ]"
 	>
-		{{ content | safe }}
+		<div class="[ stack measure ][ center ][]">
+			{{ content | safe }}
+		</div>
 	</div>
 </main>

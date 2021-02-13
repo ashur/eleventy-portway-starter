@@ -3,8 +3,8 @@
 		<div
 			class="[][ block ][ post-card-image {{ 'no-image' if not post.image }} ]"
 			role="img"
+			aria-label="{% if post.image %}{{ post.image.description }}{% else %}{{ theme.iconAlt }}, site icon{% endif %}"
 			{% if post.image %}
-			aria-label="{{ post.image.description }}"
 			style="background-image: url( {{ post.image.src }} )"
 			{% endif %}
 		></div>

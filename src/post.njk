@@ -6,18 +6,29 @@ pagination:
     size: 1
     alias: post
     addAllPagesToCollections: true
+eleventyComputed:
+    title: "{{ post.name }}"
 permalink: "/{{ post.permalink }}/index.html"
 ---
 <main
-    class="[ stack-lg ][ center container ][ content post ]"
+    class="[ stack-lg ][ center container font-serif ][ content post ]"
 >    
-    <header class="[ stack-sm measure ][ center ][ post-header ]">
+    <header class="[ stack-sm ][ center ][ post-header ]">
         <h1 class="[][ line-1 font-sans ][]">{{ post.name }}</h1>
-
-        {% include "components/post-metadata.njk" %}
+        <p class="[][ color-gray font-sans font-sm uppercase ][]">
+        {% if post.isPublished %}
+            {% date post.date %}
+        {% else %}
+            Unpublished
+        {% endif %}
+    
+        {% if post.data.category %}
+            &bull; {{ post.data.category }}
+        {% endif %}
+        </p>
     </header>
 
-    <div class="[ stack measure ][ center color-gray-dark font-sans ][ page-contents ]">
+    <div class="[ stack ][ center color-gray-dark font-sans ][ post-contents ]">
         {{ post.html | safe }}
     </div>
 </main>

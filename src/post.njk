@@ -13,12 +13,12 @@ eleventyComputed:
 permalink: "/{{ post.permalink }}/index.html"
 ---
 <main
-    class="[][ center container font-serif ][ content post ]"
+    class="[][ center container ][ content post ]"
 >
     <div class="[ stack-lg measure ][ center ][]">
         <header class="[ stack-sm ][][ post-header ]">
-            <h1 class="[][ line-1 font-sans ][]">{{ post.name }}</h1>
-            <p class="[][ color-gray font-sans font-sm uppercase ][]">
+            <h1 class="[][ line-1 ][]">{{ post.name }}</h1>
+            <p class="[][ color-gray font-sm uppercase ][]">
             {% if post.isPublished %}
                 {% date post.date %}
             {% else %}
@@ -31,7 +31,7 @@ permalink: "/{{ post.permalink }}/index.html"
             </p>
         </header>
 
-        <article class="[ stack ][ color-gray-dark font-sans ][ page-contents ]">
+        <article class="[ stack ][ color-gray-dark ][ page-contents ]">
             {{ post.html | safe }}
         </article>
     </div>

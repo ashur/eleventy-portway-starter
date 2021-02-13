@@ -13,24 +13,26 @@ eleventyComputed:
 permalink: "/{{ post.permalink }}/index.html"
 ---
 <main
-    class="[ stack-lg ][ center container font-serif ][ content post ]"
->    
-    <header class="[ stack-sm ][ center ][ post-header ]">
-        <h1 class="[][ line-1 font-sans ][]">{{ post.name }}</h1>
-        <p class="[][ color-gray font-sans font-sm uppercase ][]">
-        {% if post.isPublished %}
-            {% date post.date %}
-        {% else %}
-            Unpublished
-        {% endif %}
+    class="[][ center container font-serif ][ content post ]"
+>
+    <div class="[ stack-lg measure ][ center ][]">
+        <header class="[ stack-sm ][][ post-header ]">
+            <h1 class="[][ line-1 font-sans ][]">{{ post.name }}</h1>
+            <p class="[][ color-gray font-sans font-sm uppercase ][]">
+            {% if post.isPublished %}
+                {% date post.date %}
+            {% else %}
+                Unpublished
+            {% endif %}
     
-        {% if post.data.category %}
-            &bull; {{ post.data.category }}
-        {% endif %}
-        </p>
-    </header>
+            {% if post.data.category %}
+                &bull; {{ post.data.category }}
+            {% endif %}
+            </p>
+        </header>
 
-    <div class="[ stack ][ center color-gray-dark font-sans ][ post-contents ]">
-        {{ post.html | safe }}
+        <article class="[ stack ][ color-gray-dark font-sans ][ page-contents ]">
+            {{ post.html | safe }}
+        </article>
     </div>
 </main>

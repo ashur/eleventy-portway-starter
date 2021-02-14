@@ -33,7 +33,7 @@ module.exports = async () =>
 	let endpointDocuments = `projects/${projectId}/documents`;
 
 	let urlOptions = {};
-	if( process.env.PORTWAY_INCLUDE_DRAFTS === "true" )
+	if( process.env.PORTWAY_SHOW_DRAFTS === "true" )
 	{
 		console.log( "⚠️  Including drafts" );
 		urlOptions.params = {

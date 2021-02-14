@@ -40,8 +40,13 @@ body {
 }
 
 .page-container {
-	--padding-block: var( --s3 );
+	--padding-block: var( --s1 );
 }
+	@media screen and (min-width: 32rem) {
+		.page-container {
+			--padding-block: var( --s3 );
+		}
+	}
 
 .site-description {
 	opacity: 0.75;

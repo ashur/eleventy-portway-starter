@@ -10,6 +10,7 @@ eleventyComputed:
     title: "{{ post.name }}"
     description: "{{ post.excerpt }}"
     socialImage: "{{ post.image.src }}"
+    feedContent: "{{ post.html | safe }}"
 permalink: "/{{ post.permalink }}/index.html"
 ---
 <main

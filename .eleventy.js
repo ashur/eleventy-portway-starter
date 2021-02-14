@@ -1,9 +1,14 @@
 const CleanCSS = require( "clean-css" );
 const markdownIt = require( "markdown-it" );
+const rssPlugin = require( "@11ty/eleventy-plugin-rss" );
 
 module.exports = config =>
 {
 	config.addPassthroughCopy( "src/icons" );
+	
+	config.addPlugin( rssPlugin, {
+		posthtmlRenderOptions: {}
+	});
 
 	/* Filters & Shortcodes */
 	config.addFilter( "cssmin", code =>

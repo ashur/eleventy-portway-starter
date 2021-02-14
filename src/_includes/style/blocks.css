@@ -144,6 +144,11 @@ body {
 	font-family: var( --font-sans );
 }
 
-.page-contents ul li {
-	display: list-item;
+.page-contents ol,
+.page-contents ul
+{
+	padding-left: var( --s0 );
 }
+	.page-contents ul li {
+		display: list-item;
+	}

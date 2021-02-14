@@ -3,6 +3,8 @@ const md = require( "markdown-it" )({
 	typographer: true,
 });
 
+md.use( require( "markdown-it-anchor" ) );
+
 const striptags = require( "striptags" );
 
 class Post

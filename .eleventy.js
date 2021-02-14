@@ -32,6 +32,8 @@ module.exports = config =>
 	let markdownLibrary = markdownIt( markdownOptions )
 		.disable( "code" );
 
+	markdownLibrary.use( require( "markdown-it-anchor" ) );
+
 	config.setLibrary( "md", markdownLibrary );
 
 	return {

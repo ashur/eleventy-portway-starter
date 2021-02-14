@@ -142,6 +142,11 @@ body {
 	text-transform: uppercase;
 }
 
+.page-contents hr {
+	border: none;
+	border-top: solid var( --color-gray ) 1px;
+}
+
 .page-contents img {
 	width: 100%;
 }

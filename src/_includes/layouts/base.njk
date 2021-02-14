@@ -62,13 +62,24 @@
 
 	{{ content | safe }}
 
-	<footer
-		class="[][ bg-black font-sans ][ footer ]"
-	>
+	<footer class="[][][ footer font-sm ]">
 		<div
-			class="[ container center font-sm ][][]"
+			class="[ center ][ grid container ][ footer-sections ]"
 		>
-			<p>{{ site.name }}</p>
+			<section class="[ stack-sm ][][]">
+				<h2 class="[][ bold ][]">{{ site.name }}</h2>
+				<p class="[][ opacity-75 ][]">{{ site.description | safe }}</p>
+			</section>
+
+			<section class="[ stack-sm ][][]">
+				<h2 class="[][ bold ][]">Links</h2>
+
+				<ul class="[ stack-sm ][][ footer-links ]">
+				{% for link in links %}
+					<li><a href="{{ link.url }}" class="[][ opacity-75 ][]">{{ link.name }}</a></li>
+				{% endfor %}
+				</ul>
+			</section>
 		</div>
 	</footer>
 </body>

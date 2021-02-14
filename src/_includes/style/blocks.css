@@ -37,6 +37,8 @@ body {
 
 .footer {
 	flex-shrink: 0;
+	background-color: var( --theme-color-footerBackground, var( --color-black ) );
+	color: var( --theme-color-footerText, var( --color-white ) );
 }
 
 .page-container {

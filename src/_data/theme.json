@@ -5,7 +5,7 @@
 	},
 	"footer": {
 		"background": "var( --color-black )",
-		"text": "var( --color-white )"
+		"text": "var( --color-gray-light )"
 	},
 	"icon": {
 		"filename": "whale.svg",

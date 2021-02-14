@@ -1,7 +1,7 @@
 ---
 title: Credits
 ---
-This starter template looks a little jazzier thanks to the following people.
+This starter template looks a little jazzier thanks to art and photography by the following people.
 
 ## Icons
 

@@ -157,3 +157,16 @@ body {
 	.page-contents ul li {
 		display: list-item;
 	}
+
+.page-contents p code {
+	background-color: var( --color-gray-light );
+	color: var( --color-black );
+}
+
+.page-contents pre code {
+	display: block;
+	padding: var( --s0 );
+	background-color: var( --color-black );
+	color: var( --color-white );
+	line-height: var( --s-ratio );
+}

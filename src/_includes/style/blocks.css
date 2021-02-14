@@ -130,7 +130,8 @@ body {
 	font-size: var( --s1 );
 	font-weight: bold;
 }
-	.page-contents * + h2 {
+	.page-contents * + h2,
+	.page-contents * + h3 {
 		margin-top: var( --s2 );
 	}
 	

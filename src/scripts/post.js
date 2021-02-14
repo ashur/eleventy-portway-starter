@@ -11,6 +11,8 @@ class Post
 {
 	constructor( document )
 	{
+		this.documentUrl = `https://portway.app/d/project/${document.projectId}/document/${document.id}`
+
 		this.name = document.name;
 		this.slug = document.slug;
 

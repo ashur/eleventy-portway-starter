@@ -1,6 +1,9 @@
 .bg-black {
 	background-color: var( --color-black );
 }
+.bg-gray-light {
+	background-color: var( --color-gray-light );
+}
 
 .block {
 	display: block;
@@ -8,6 +11,10 @@
 
 .bold {
 	font-weight: bold;
+}
+
+.border-top {
+	border-top: solid var( --color-gray-light ) 1px;
 }
 
 .color-gray-light {
@@ -81,6 +88,9 @@
 }
 .padding-2 {
 	padding: var( --s2 );
+}
+.padding-top-0 {
+	padding-top: var( --s0 );
 }
 
 .uppercase {

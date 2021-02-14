@@ -40,7 +40,7 @@
 			--theme-color-footerBackground: {{ theme.footer.background }};
 			--theme-color-footerText: {{ theme.footer.text }};
 			--theme-color-icon: var( --theme-color-headerText );
-			--theme-icon: url( /icons/{{ theme.icon }} );
+			--theme-icon: url( /icons/{{ theme.icon.filename }} );
 		}
 	</style>
 </head>
@@ -52,7 +52,7 @@
 		>
 			<ul class="[][][ nav-items ]">
 				<li>
-				{% set svg %}../../icons/{{ theme.icon }}{% endset %}
+				{% set svg %}../../icons/{{ theme.icon.filename }}{% endset %}
 				<a class="[][ no-underline ][ nav-icon ]" href="/">{% include svg %}</a></li>
 				{% for navItem in collections.pages %}
 				<li><a href="{{ navItem.url }}" class="{{ 'active' if navItem.url == page.url }}">{{ navItem.data.title }}</a></li>

@@ -131,8 +131,11 @@ body {
 		text-decoration: underline;
 	}
 
-	.post-pinned:before {
-		content: "• ";
+	.post-pinned svg {
+		position: relative;
+		top: var( --s-4 );
+		height: var( --s0 );
+		width: var( --s0 );
 	}
 
 .post-header h1 {

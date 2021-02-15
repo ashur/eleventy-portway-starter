@@ -1,9 +1,13 @@
 <p class="[][ color-gray-dark font-sm uppercase ][]">
+	{% if post.data.pinned %}
+	<span class="[][][ post-pinned ]" role="img" aria-label="Pinned">
+		{% include "../../icons/push-pin.svg" %}
+	</span>
+	{% endif %}
+
 	{% if post.isPublished %}
 		{% date post.date %}
 	{% else %}
 		Unpublished
 	{% endif %}
-
-	{% if post.data.pinned %}<span class="[][][ post-pinned ]">Pinned</span>{% endif %}
 </p>

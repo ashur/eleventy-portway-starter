@@ -5,7 +5,7 @@ This starter template looks a little jazzier thanks to art and photography by th
 
 ## Icons
 
-- Anchor, ice cream, push pin, sunglasses, and whale by [Gia Hai]
+- Anchor, camera, ice cream, push pin, sunglasses, and whale by [Gia Hai]
 
 [Gia Hai]: https://thenounproject.com/giahhai/
 

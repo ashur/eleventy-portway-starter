@@ -206,6 +206,7 @@ body {
 
 .page-contents pre code {
 	display: block;
+	overflow-x: scroll;
 	border-radius: var( --s-4 );
 	padding: var( --s0 );
 	background-color: var( --color-black );

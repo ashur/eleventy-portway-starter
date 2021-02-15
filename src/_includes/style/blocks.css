@@ -148,6 +148,10 @@ body {
 		}
 	}
 
+.page-contents {
+	color: var( --theme-color-bodyText );
+}
+
 .page-contents h2, .page-contents h3 {
 	line-height: 1;
 }

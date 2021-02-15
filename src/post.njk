@@ -32,9 +32,8 @@ permalink: "/{{ post.permalink }}/index.html"
             </p>
         </header>
 
-        <article class="[ stack ][ color-gray-dark ][ page-contents ]">
+        <article class="[ stack ][][ page-contents ]">
             {{ post.html | safe }}
-
         </article>
 
         {% if env.PORTWAY_SHOW_TOOLS == "true" %}

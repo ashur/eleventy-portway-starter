@@ -189,7 +189,7 @@ body {
 
 .page-contents ol,
 .page-contents ul,
-.page-contents blockquote,
+.page-contents blockquote
 {
 	padding-left: var( --s0 );
 }

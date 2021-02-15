@@ -19,17 +19,7 @@ permalink: "/{{ post.permalink }}/index.html"
     <div class="[ stack-lg measure ][ center ][]">
         <header class="[ stack-sm ][][ post-header ]">
             <h1 class="[][ line-1 ][]">{{ post.name }}</h1>
-            <p class="[][ color-gray font-sm uppercase ][]">
-            {% if post.isPublished %}
-                {% date post.date %}
-            {% else %}
-                Unpublished
-            {% endif %}
-    
-            {% if post.data.category %}
-                &bull; {{ post.data.category }}
-            {% endif %}
-            </p>
+            {% include "components/post-metadata.njk" %}
         </header>
 
         <article class="[ stack ][][ page-contents ]">

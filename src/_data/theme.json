@@ -8,7 +8,7 @@
 		"text": "var( --color-gray-light )"
 	},
 	"icon": {
-		"filename": "whale.svg",
-		"alt": "whale"
+		"filename": "sunglasses.svg",
+		"alt": "sunglasses"
 	}
 }

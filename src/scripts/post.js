@@ -77,7 +77,8 @@ class Post
 	get permalink()
 	{
 		let yyyy = this.date.getFullYear();
-		let mm = this.date.getMonth().toString().padStart( 2, "0" );
+		let month = this.date.getMonth() + 1;
+		let mm = month.toString().padStart( 2, "0" );
 
 		return `/${yyyy}/${mm}/${this.slug}`;
 	}

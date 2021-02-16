@@ -26,9 +26,9 @@ permalink: "/{{ post.permalink }}/index.html"
             {{ post.html | safe }}
         </article>
 
-        {% if env.PORTWAY_SHOW_TOOLS == "true" %}
+        {% if env.PORTWAY_SHOW_EDIT_LINK == "true" %}
         <div class="[][ border-top padding-top-0 font-sm ][ portway-tools ]">
-            <a href="{{ post.documentUrl }}">Edit this post on Portway</a>
+            <a href="{{ post.documentUrl }}">Edit this post in Portway</a>
         </div>
         {% endif %}
     </div>

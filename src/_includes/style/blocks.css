@@ -213,3 +213,9 @@ body {
 	color: var( --color-white );
 	line-height: var( --s-ratio );
 }
+
+.page-contents .callout {
+	border-radius: var( --s-4 );
+	background: var( --color-gray-lightest );
+	padding: var( --s0 );
+}

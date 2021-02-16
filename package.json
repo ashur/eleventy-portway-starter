@@ -5,7 +5,7 @@
   "author": "Ashur Cabrera",
   "scripts": {
     "build": "eleventy",
-    "clean": "rm -r ./.cache",
+    "clean": "rm -rf ./.cache",
     "serve": "eleventy --serve"
   },
   "keywords": [],

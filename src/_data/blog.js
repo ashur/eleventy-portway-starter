@@ -27,7 +27,10 @@ module.exports = async () =>
 		if( !process.env[varname] )
 		{
 			console.log( `⚠️ Missing required environment variable '${varname}'.` );
-			return {};
+			return {
+				name: "Eleventy Portway Starter",
+				description: "A template for building a simple blog with Eleventy and Portway",
+			};
 		}
 	}
 

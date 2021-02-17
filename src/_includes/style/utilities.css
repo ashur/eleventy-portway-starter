@@ -96,6 +96,10 @@
 	padding-top: var( --s0 );
 }
 
+.rounded {
+	border-radius: var( --s-4 );
+}
+
 .uppercase {
 	text-transform: uppercase;
 }

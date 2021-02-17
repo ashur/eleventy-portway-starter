@@ -84,17 +84,21 @@ module.exports = async () =>
 					})
 					.sort( (docA, docB) =>
 					{
-						// Pinned
-						if( docA.data.pinned === "true" )
+						// If only one item is pinned, sort it before the unpinned item
+						if( docA.data.pinned !== "true" || docB.data.pinned !== "true" )
 						{
-							return -1;
-						}
-						else if( docB.data.pinned === "true" )
-						{
-							return 1;
+							if( docA.data.pinned === "true" )
+							{
+								return -1;
+							}
+							else if( docB.data.pinned === "true" )
+							{
+								return 1;
+							}
 						}
 
-						// Date
+						// Otherwise, fall through to date-based sorting
+						// (including cases where both items are pinned)
 						return docB.date - docA.date;
 					});
 			});

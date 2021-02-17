@@ -76,6 +76,7 @@
 				<p class="[][ opacity-75 ][]">{{ site.description | safe }}</p>
 			</section>
 
+			{% if links.length > 0 %}
 			<section class="[ stack-sm ][][]">
 				<h2 class="[][ bold ][]">Links</h2>
 
@@ -85,6 +86,7 @@
 				{% endfor %}
 				</ul>
 			</section>
+			{% endif %}
 		</div>
 	</footer>
 </body>

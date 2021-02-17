@@ -197,7 +197,7 @@ body {
 		display: list-item;
 	}
 
-.page-contents p code {
+.page-contents *:not(pre) code {
 	border-radius: var( --s-4 );
 	padding: var( --s-4 ) var( --s-3 );
 	background-color: var( --color-gray-light );

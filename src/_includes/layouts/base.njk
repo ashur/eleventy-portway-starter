@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	{% set pageTitle %}{% if title %}{{ title }} | {% endif %}{{ site.name }}{% endset %}
-	{% set pageDescription %}{{ description if description else (site.description | striptags ) }}{% endset %}
+	{% set pageTitle %}{% if title %}{{ title }} | {% endif %}{{ blog.name }}{% endset %}
+	{% set pageDescription %}{{ description if description else blog.description }}{% endset %}
 	{% set pageUrl %}{{ site.url }}{{ page.url }}{% endset %}
 
 	<title>{{ pageTitle }}</title>
@@ -72,8 +72,8 @@
 			class="[ center ][ grid container ][ footer-sections ]"
 		>
 			<section class="[ stack-sm ][][]">
-				<h2 class="[][ bold ][]">{{ site.name }}</h2>
-				<p class="[][ opacity-75 ][]">{{ site.description | safe }}</p>
+				<h2 class="[][ bold ][]">{{ blog.name }}</h2>
+				<p class="[][ opacity-75 ][]">{{ blog.description }}</p>
 			</section>
 
 			{% if links.length > 0 %}

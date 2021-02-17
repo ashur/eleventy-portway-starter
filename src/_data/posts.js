@@ -8,19 +8,6 @@ const Post = require( "../scripts/post" );
  */
 dotenv.config();
 
-let requiredVarnames = [
-	"PORTWAY_KEY",
-	"PORTWAY_PROJECT_ID",
-];
-
-requiredVarnames.forEach( varname =>
-{
-	if( !process.env[varname] )
-	{
-		throw new Error( `Missing required environment variable '${varname}'.` );
-	}
-});
-
 /**
  * Fetch documents from Portway
  *
@@ -28,6 +15,23 @@ requiredVarnames.forEach( varname =>
  */
 module.exports = async () =>
 {
+	let requiredVarnames = [
+		"PORTWAY_KEY",
+		"PORTWAY_PROJECT_ID",
+	];
+
+	// Don't fail the build if .env vars are
+	// missing. Just log a warning and return an
+	// empty array instead.
+	for( let varname of requiredVarnames )
+	{
+		if( !process.env[varname] )
+		{
+			console.log( `⚠️ Missing required environment variable '${varname}'.` );
+			return [];
+		}
+	}
+
 	/* Posts */
 	let projectId = process.env.PORTWAY_PROJECT_ID;
 	let endpointDocuments = `projects/${projectId}/documents`;

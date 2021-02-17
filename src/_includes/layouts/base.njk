@@ -55,7 +55,9 @@
 				{% set svg %}../../icons/{{ theme.icon.filename }}{% endset %}
 				<li><a class="[][ no-underline ][ nav-icon ]" href="/">{% include svg %}</a></li>
 				{% for navItem in collections.pages %}
+				{% if navItem.data.navigation != false %}
 				<li><a href="{{ navItem.url }}" class="{{ 'active' if navItem.url == page.url }}">{{ navItem.data.title }}</a></li>
+				{% endif %}
 				{% endfor %}
 			</ul>
 		</nav>

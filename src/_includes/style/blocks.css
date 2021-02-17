@@ -179,7 +179,7 @@ body {
 	border-top: solid var( --color-gray ) 1px;
 }
 
-.page-contents img {
+.page-contents img:not(.no-scale) {
 	width: 100%;
 }
 

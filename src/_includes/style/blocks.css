@@ -191,7 +191,7 @@ body {
 .page-contents ul,
 .page-contents blockquote
 {
-	padding-left: var( --s0 );
+	margin-left: var( --s2 );
 }
 	.page-contents ul li {
 		display: list-item;

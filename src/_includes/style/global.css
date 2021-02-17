@@ -44,7 +44,7 @@ code {
 	font-family: var( --font-mono );
 }
 
-ul {
+ol, ul {
 	padding: 0;
 }
 	ul li {

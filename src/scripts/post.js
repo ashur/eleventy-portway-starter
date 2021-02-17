@@ -4,6 +4,7 @@ const md = require( "markdown-it" )({
 });
 
 md.use( require( "markdown-it-anchor" ) );
+md.use( require( "markdown-it-attrs" ) );
 
 const striptags = require( "striptags" );
 

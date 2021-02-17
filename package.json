@@ -18,6 +18,7 @@
     "clean-css": "^5.0.1",
     "dotenv": "^8.2.0",
     "markdown-it-anchor": "^7.0.2",
+    "markdown-it-attrs": "^4.0.0",
     "striptags": "^3.1.1"
   },
   "devDependencies": {}

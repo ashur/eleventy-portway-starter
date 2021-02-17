@@ -38,6 +38,7 @@ module.exports = config =>
 		.disable( "code" );
 
 	markdownLibrary.use( require( "markdown-it-anchor" ) );
+	markdownLibrary.use( require( "markdown-it-attrs" ) );
 
 	config.setLibrary( "md", markdownLibrary );
 

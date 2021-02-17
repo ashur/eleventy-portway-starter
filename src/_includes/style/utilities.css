@@ -4,6 +4,9 @@
 .bg-gray-light {
 	background-color: var( --color-gray-light );
 }
+.bg-gray-lightest {
+	background-color: var( --color-gray-lightest );
+}
 
 .block {
 	display: block;

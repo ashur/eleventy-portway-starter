@@ -1,7 +1,7 @@
 const Cache = require( "@11ty/eleventy-cache-assets" );
 const dotenv = require( "dotenv" );
-const Portway = require( "../scripts/portway" );
-const Post = require( "../scripts/post" );
+const Portway = require( "../_scripts/portway" );
+const Post = require( "../_scripts/post" );
 
 /*
  * Environment variables

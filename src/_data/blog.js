@@ -1,6 +1,6 @@
 const Cache = require( "@11ty/eleventy-cache-assets" );
 const dotenv = require( "dotenv" );
-const Portway = require( "../scripts/portway" );
+const Portway = require( "../_scripts/portway" );
 const site = require( "../_data/site.json" );
 
 /*

@@ -5,7 +5,8 @@ const rssPlugin = require( "@11ty/eleventy-plugin-rss" );
 module.exports = config =>
 {
 	config.addPassthroughCopy( "src/icons" );
-	
+	config.addPassthroughCopy({ "src/_static": "/" });
+
 	config.addPlugin( rssPlugin, {
 		posthtmlRenderOptions: {}
 	});

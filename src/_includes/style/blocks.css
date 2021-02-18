@@ -76,6 +76,10 @@ body {
 		}
 	}
 
+.site-name {
+	font-size: var( --s2 );
+}
+
 .posts {
 	--grid-gap: var( --s2 );
 

@@ -10,10 +10,12 @@ eleventyExcludeFromCollections: true
   <link href="{{ blog.url }}"/>
   <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ blog.url }}</id>
+  {% if site.author.name or site.author.email %}
   <author>
-	<name>{{ site.author.name }}</name>
-	<email>{{ site.author.email }}</email>
+    {% if site.author.name %}<name>{{ site.author.name }}</name>{% endif %}
+	  {% if site.author.email %}<email>{{ site.author.email }}</email>{% endif %}
   </author>
+  {% endif %}
   {%- for post in collections.posts | reverse %}
   {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(blog.url) }}{% endset %}
   <entry>

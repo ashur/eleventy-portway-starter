@@ -6,16 +6,16 @@ eleventyExcludeFromCollections: true
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ blog.name }}</title>
   <subtitle>{{ blog.description }}</subtitle>
-  <link href="{{ site.url }}{{ permalink }}" rel="self"/>
-  <link href="{{ site.url }}"/>
+  <link href="{{ blog.url }}{{ permalink }}" rel="self"/>
+  <link href="{{ blog.url }}"/>
   <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-  <id>{{ site.url }}</id>
+  <id>{{ blog.url }}</id>
   <author>
 	<name>{{ site.author.name }}</name>
 	<email>{{ site.author.email }}</email>
   </author>
   {%- for post in collections.posts | reverse %}
-  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(site.url) }}{% endset %}
+  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(blog.url) }}{% endset %}
   <entry>
 	<title>{{ post.data.title }}</title>
 	<link href="{{ absolutePostUrl }}"/>

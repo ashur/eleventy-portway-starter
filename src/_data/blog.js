@@ -1,6 +1,7 @@
 const Cache = require( "@11ty/eleventy-cache-assets" );
 const dotenv = require( "dotenv" );
 const Portway = require( "../scripts/portway" );
+const site = require( "../_data/site.json" );
 
 /*
  * Environment variables
@@ -19,6 +20,8 @@ module.exports = async () =>
 		"PORTWAY_PROJECT_ID",
 	];
 
+	let url = site.url || process.env.URL;
+
 	// Don't fail the build if .env vars are
 	// missing. Just log a warning and return an
 	// empty array instead.
@@ -30,6 +33,7 @@ module.exports = async () =>
 			return {
 				name: "Eleventy Portway Starter",
 				description: "A template for building a simple blog with Eleventy and Portway",
+				url: url,
 			};
 		}
 	}
@@ -59,6 +63,7 @@ module.exports = async () =>
 		return {
 			name: project.data.name,
 			description: project.data.description,
+			url: url,
 		};
 	}
 	catch( error )

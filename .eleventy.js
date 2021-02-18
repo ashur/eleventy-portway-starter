@@ -28,6 +28,17 @@ module.exports = config =>
 		});
 	});
 
+	config.addFilter( "sortPages", pages =>
+	{
+		return pages.sort( (pageA, pageB) =>
+		{
+			let sortPageA = pageA.data.sort || 0;
+			let sortPageB = pageB.data.sort || 0;
+
+			return sortPageA - sortPageB;
+		});
+	});
+
 	/* Markdown configuration */
 	let markdownOptions = {
 		html: true,

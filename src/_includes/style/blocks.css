@@ -196,6 +196,7 @@ body {
 
 .page-contents img:not(.no-scale) {
 	width: 100%;
+	border-radius: var( --s-4 );
 }
 
 .page-contents strong {

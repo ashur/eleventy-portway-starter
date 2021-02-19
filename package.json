@@ -6,6 +6,7 @@
   "scripts": {
     "build": "eleventy",
     "clean": "rm -rf ./.cache && rm -rf ./dist",
+    "postinstall": "mkdir -p ./src/static",
     "serve": "eleventy --serve"
   },
   "keywords": [],

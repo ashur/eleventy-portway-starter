@@ -11,7 +11,7 @@
 	--s4: calc( var( --s3 ) * var( --s-ratio ) );
 
 	--container-width: 64rem;
-	--measure-default: 64ch;
+	--measure-default: 72ch;
 	--measure: var( --measure-default );
 
 	--color-black: #111;

@@ -1,0 +1,27 @@
+---
+title: Archive of Posts
+layout: layouts/page.njk
+---
+{%- set sortedPosts = (posts | sortPosts("date")) %}
+{%- set previousYear = 0 %}
+{%- set previousMonth = 0 %}
+{%- for post in sortedPosts %}
+	{%- set currentYear = post.date.getFullYear() %}
+	{%- set currentMonth = post.date.getMonth() + 1 %}
+	{%- set newMonth = currentMonth != previousMonth %}
+
+	{%- set nextPost = posts[ loop.index0 + 1 ] %}
+
+	{%- if currentYear != previousYear %}<h2>{{ currentYear }}</h2>{%- endif %}
+	{%- if newMonth %}
+		<h3>{{ post.date.toLocaleDateString([], { month: "long" } ) }}</h3>
+			<ul>
+	{%- endif %}
+				<li><a href="{{ post.permalink }}">{{ post.name }}</a></li>
+	{% if nextPost and currentMonth != (nextPost.date.getMonth() + 1) %}
+			</ul>
+	{% endif %}
+
+	{%- set previousYear = currentYear %}
+	{%- set previousMonth = currentMonth %}
+{%- endfor %}

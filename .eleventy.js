@@ -39,6 +39,22 @@ module.exports = config =>
 		});
 	});
 
+	config.addFilter( "sortPosts", (posts, property="date", order="desc") =>
+	{
+		return posts.sort( (postA, postB) =>
+		{
+			let sortPostA = postA[property];
+			let sortPostB = postB[property];
+
+			if( order === "desc" )
+			{
+				return sortPostB - sortPostA;
+			}
+
+			return sortPostA - sortPostB;
+		});
+	});
+
 	/* Markdown configuration */
 	let markdownOptions = {
 		html: true,

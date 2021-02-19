@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	{% set pageTitle %}{% if title %}{{ title }} | {% endif %}{{ blog.name }}{% endset %}
-	{% set pageDescription %}{{ description if description else blog.description }}{% endset %}
-	{% set pageUrl %}{{ site.url }}{{ page.url }}{% endset %}
+	{% set pageTitle %}{% if title %}{{ title }} | {% endif %}{{ blog.name }}{% endset -%}
+	{%- set pageDescription %}{{ description if description else blog.description }}{% endset -%}
+	{%- set pageUrl %}{{ site.url }}{{ page.url }}{% endset -%}
 
 	<title>{{ pageTitle }}</title>
 

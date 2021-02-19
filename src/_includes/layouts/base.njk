@@ -51,11 +51,12 @@
 <body>
 	<header class="[][][ header ]">
 		<nav
-			class="[ container center font-sm uppercase ][][]"
+			class="[][ grid container center font-sm uppercase ][ site-nav ]"
 		>
+			{% set svg %}../../icons/{{ theme.icon.filename }}{% endset %}
+			<a class="[][ no-underline ][ nav-icon ]" href="/">{% include svg %}</a>
+
 			<ul class="[][][ nav-items ]">
-				{% set svg %}../../icons/{{ theme.icon.filename }}{% endset %}
-				<li><a class="[][ no-underline ][ nav-icon ]" href="/">{% include svg %}</a></li>
 				{% for navItem in (collections.pages | sortPages) %}
 				{% if navItem.data.navigation != false %}
 				<li><a href="{{ navItem.url }}" class="{{ 'active' if navItem.url == page.url }}">{{ navItem.data.title }}</a></li>

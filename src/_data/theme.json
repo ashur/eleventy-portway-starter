@@ -1,7 +1,7 @@
 {
 	"header": {
-		"background": "var( --color-black )",
-		"text": "var( --color-white )"
+		"background": "#3c366b",
+		"text": "#ebf4ff"
 	},
 	"footer": {
 		"background": "var( --color-black )",

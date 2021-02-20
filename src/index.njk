@@ -10,8 +10,10 @@ layout: layouts/base.njk
 		<div
 			class="[ stack-sm ][ container center ][]"
 		>
-			<h1 class="[][ bold line-1 ][ site-name ]">{{ blog.name }}</h1>
+			<h1 class="[][ bold line-1 ][ site-name ]">{{ blog.name }}</h1>			
+			{% if blog.description -%}
 			<p class="[][ font-sm opacity-75 ][]">{{ blog.description }}</p>
+			{%- endif %}
 		</div>
 	</div>
 

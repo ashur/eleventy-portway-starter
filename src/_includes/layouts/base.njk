@@ -74,7 +74,9 @@
 		>
 			<section class="[ stack-sm ][][]">
 				<h2 class="[][ bold ][]">{{ blog.name }}</h2>
+				{% if blog.description -%}
 				<p class="[][ opacity-75 ][]">{{ blog.description }}</p>
+				{% endif %}
 			</section>
 
 			{% if links.length > 0 %}

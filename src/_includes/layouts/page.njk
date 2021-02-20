@@ -19,6 +19,12 @@ layout: layouts/base.njk
 	>
 		<div class="[ stack measure ][ center ][]">
 			{{ content | safe }}
+			
+			{% if env.PORTWAY_SHOW_EDIT_LINK == "true" %}
+			<div class="[][ border-top padding-top-0 font-sm ][ portway-tools ]">
+				<a href="{{ page.documentUrl }}">Edit this post in Portway</a>
+			</div>
+			{% endif %}
 		</div>
 	</div>
 </main>

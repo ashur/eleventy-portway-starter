@@ -92,10 +92,8 @@ body {
 }
 
 .posts {
-	--grid-gap: var( --s2 );
-
-	column-gap: var( --grid-gap );
-	row-gap: var( --grid-gap );
+	column-gap: var( --s2 );
+	row-gap: var( --s3 );
 
 	grid-template-columns: repeat(
 		auto-fit,

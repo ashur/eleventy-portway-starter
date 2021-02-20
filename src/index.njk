@@ -31,7 +31,7 @@ layout: layouts/base.njk
 			class="[ stack container ][ center ][ page-container page-contents ]"
 		>
 			<div class="[ stack measure ][ center bg-gray-lightest padding-1 rounded ][]">
-				{% if env.PORTWAY_KEY == undefined or env.PORTWAY_PROJECT_ID == undefined %}
+				{% if env.PORTWAY_POSTS_ID == undefined or env.PORTWAY_POSTS_KEY == undefined %}
 				<p><strong>Howdy!</strong> <span role="img" aria-label="waving">👋</span> This site appears to be missing one or more required environment variables. See <a href="https://eleventy-portway-starter.netlify.app/posts/getting-started/">Getting Started</a> for details on configuring your site to communicate with Portway.</p>
 				{% else %}
 				<p><strong>Hello!</strong> <span role="img" aria-label="waving">👋</span> It looks like this site is configured properly, but doesn’t have any blog posts to display just yet.</p>

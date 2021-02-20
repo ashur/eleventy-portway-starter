@@ -16,8 +16,8 @@ dotenv.config();
 module.exports = async () =>
 {
 	let requiredVarnames = [
-		"PORTWAY_KEY",
-		"PORTWAY_PROJECT_ID",
+		"PORTWAY_POSTS_KEY",
+		"PORTWAY_POSTS_ID",
 	];
 
 	let url = site.url || process.env.URL;
@@ -29,7 +29,7 @@ module.exports = async () =>
 	{
 		if( !process.env[varname] )
 		{
-			console.log( `⚠️ Missing required environment variable '${varname}'.` );
+			console.log( `⚠️  Environment variable '${varname}' not found.` );
 			return {
 				name: "Eleventy Portway Starter",
 				description: "A template for building a simple blog with Eleventy and Portway",
@@ -39,13 +39,13 @@ module.exports = async () =>
 	}
 
 	/* Posts */
-	let projectId = process.env.PORTWAY_PROJECT_ID;
+	let projectId = process.env.PORTWAY_POSTS_ID;
 	let endpoint = `projects/${projectId}`;
 
 	try
 	{
 		let project = await Portway.fetch(
-			process.env.PORTWAY_KEY,
+			process.env.PORTWAY_POSTS_KEY,
 			endpoint,
 			{}
 		);

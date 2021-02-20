@@ -1,0 +1,14 @@
+---
+layout: layouts/page.njk
+tags: pages
+pagination:
+    data: pages
+    size: 1
+    alias: page
+    addAllPagesToCollections: true
+eleventyComputed:
+    title: "{{ page.name }}"
+    description: "{{ page.description }}"
+permalink: "/{{ page.permalink }}/index.html"
+---
+{{ page.html | safe }}

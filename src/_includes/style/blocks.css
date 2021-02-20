@@ -116,6 +116,9 @@ body {
 		}
 	}
 
+.post-card {
+	max-width: 40ch;
+}
 .post-card a {
 	text-decoration: none;
 }

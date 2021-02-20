@@ -2,9 +2,5 @@
 	{
 		"name": "RSS Feed",
 		"url": "/feed.xml"
-	},
-	{
-		"name": "View Source",
-		"url": "https://github.com/ashur/eleventy-portway-starter"
 	}
 ]

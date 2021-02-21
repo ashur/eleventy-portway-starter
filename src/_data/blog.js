@@ -16,8 +16,8 @@ dotenv.config();
 module.exports = async () =>
 {
 	let requiredVarnames = [
-		"PORTWAY_POSTS_KEY",
-		"PORTWAY_POSTS_ID",
+		"PORTWAY_API_KEY",
+		"PORTWAY_PROJECT_ID",
 	];
 
 	let url = site.url || process.env.URL;
@@ -39,13 +39,13 @@ module.exports = async () =>
 	}
 
 	/* Posts */
-	let projectId = process.env.PORTWAY_POSTS_ID;
+	let projectId = process.env.PORTWAY_PROJECT_ID;
 	let endpoint = `projects/${projectId}`;
 
 	try
 	{
 		let project = await Portway.fetch(
-			process.env.PORTWAY_POSTS_KEY,
+			process.env.PORTWAY_API_KEY,
 			endpoint,
 			{}
 		);

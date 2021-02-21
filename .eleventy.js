@@ -28,6 +28,11 @@ module.exports = config =>
 		});
 	});
 
+	config.addFilter( "slice", (array, start, end) =>
+	{
+		return array.slice( start, end );
+	});
+
 	config.addFilter( "sortPages", pages =>
 	{
 		return pages.sort( (pageA, pageB) =>

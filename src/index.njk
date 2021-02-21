@@ -22,9 +22,12 @@ layout: layouts/base.njk
 	>
 		{% if posts.length > 0 %}
 		<div class="[][ grid ][ posts ]">
-		{% for post in posts -%}
-			{% include "components/post-card.njk" %}
-		{% endfor -%}
+			{% for post in posts | slice( 0, 9 ) -%}
+				{% include "components/post-card.njk" %}
+			{% endfor -%}
+		</div>
+		<div class="[][ border-top padding-top-0 ][]">
+			<p>View all posts in <a href="/archive">the archive</a>.</p>
 		</div>
 		{% else %}
 		<div

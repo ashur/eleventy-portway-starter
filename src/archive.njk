@@ -3,7 +3,7 @@ title: Archive of Posts
 layout: layouts/page.njk
 editLink: false
 ---
-{%- set sortedPosts = (posts | sortPosts("date")) %}
+{%- set sortedPosts = (documents.posts | sortPosts("date")) %}
 {%- set previousYear = 0 %}
 {%- set previousMonth = 0 %}
 {%- for post in sortedPosts %}

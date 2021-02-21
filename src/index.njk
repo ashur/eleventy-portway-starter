@@ -20,9 +20,9 @@ layout: layouts/base.njk
 	<div
 		class="[ stack-lg ][ container center ][ page-container ]"
 	>
-		{% if posts.length > 0 %}
+		{% if documents.posts.length > 0 %}
 		<div class="[][ grid ][ posts ]">
-			{% for post in posts | slice( 0, 9 ) -%}
+			{% for post in documents.posts | slice( 0, 9 ) -%}
 				{% include "components/post-card.njk" %}
 			{% endfor -%}
 		</div>

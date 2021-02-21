@@ -73,6 +73,10 @@
 	line-height: 1;
 }
 
+.margin-right-0 {
+	margin-right: var( --s0 );
+}
+
 .no-underline,
 .no-underline a
 {
@@ -98,6 +102,10 @@
 
 .rounded {
 	border-radius: var( --s-4 );
+}
+
+.tabular-nums {
+	font-variant: tabular-nums;
 }
 
 .uppercase {

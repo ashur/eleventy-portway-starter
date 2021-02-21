@@ -13,14 +13,23 @@ editLink: false
 
 	{%- set nextPost = posts[ loop.index0 + 1 ] %}
 
-	{%- if currentYear != previousYear %}<h2>{{ currentYear }}</h2>{%- endif %}
+	{%- if currentYear != previousYear or currentMonth != previousMonth %}
+		<h2>{{ post.date.toLocaleDateString([], { month: "long" } ) }} {{ currentYear }}</h2>{%- endif %}
 	{%- if newMonth %}
-		<h3>{{ post.date.toLocaleDateString([], { month: "long" } ) }}</h3>
-			<ul>
+		<div class="[ stack-sm ][][]">
 	{%- endif %}
-				<li><a href="{{ post.permalink }}">{{ post.name }}</a></li>
+			<p>
+				<span class="[][ color-gray font-sm margin-right-0 tabular-nums uppercase ][]">
+				{% if post.isPublished %}
+					{% date post.date %}
+				{% else %}
+					Unpublished
+				{% endif %}
+				</span>
+				<a href="{{ post.permalink }}">{{ post.name }}</a>
+			</p>
 	{% if nextPost and currentMonth != (nextPost.date.getMonth() + 1) %}
-			</ul>
+		</div>
 	{% endif %}
 
 	{%- set previousYear = currentYear %}

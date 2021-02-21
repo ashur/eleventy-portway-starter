@@ -9,6 +9,9 @@ pagination:
 eleventyComputed:
     title: "{{ page.name }}"
     description: "{{ page.description }}"
+    navigation: "{{ page.data.navigation }}"
+    socialImage: "{{ post.image.src }}"
+    sort: "{{ page.data.sort }}"
 permalink: "/{{ page.permalink }}/index.html"
 ---
 {{ page.html | safe }}

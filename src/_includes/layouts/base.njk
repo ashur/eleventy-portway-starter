@@ -58,7 +58,7 @@
 
 			<ul class="[][][ nav-items ]">
 				{% for navItem in (collections.pages | sortPages) %}
-				{% if navItem.data.navigation != false %}
+				{% if navItem.data.navigation !== false and navItem.data.navigation !== "false" %}
 				<li><a href="{{ navItem.url }}" class="{{ 'active' if navItem.url == page.url }}">{{ navItem.data.title }}</a></li>
 				{% endif %}
 				{% endfor %}

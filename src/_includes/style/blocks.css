@@ -88,11 +88,11 @@ body {
 
 .posts {
 	column-gap: var( --s2 );
-	row-gap: var( --s3 );
+	row-gap: var( --s4 );
 
 	grid-template-columns: repeat(
 		auto-fit,
-		minmax( 24ch, 1fr )
+		minmax( 26ch, 1fr )
 	);
 }
 
@@ -110,7 +110,7 @@ body {
 	}
 
 .post-card {
-	max-width: 40ch;
+	max-width: 52ch;
 }
 .post-card a {
 	text-decoration: none;

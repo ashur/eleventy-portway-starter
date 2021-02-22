@@ -16,14 +16,17 @@ eleventyExcludeFromCollections: true
 	  {% if site.author.email %}<email>{{ site.author.email }}</email>{% endif %}
   </author>
   {% endif %}
+
   {%- for post in collections.posts | reverse %}
-  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(blog.url) }}{% endset %}
+    {% if post.data.isPublished == "true" -%}
+    {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(blog.url) }}{% endset -%}
   <entry>
-	<title>{{ post.data.title }}</title>
-	<link href="{{ absolutePostUrl }}"/>
-	<updated>{{ post.date | dateToRfc3339 }}</updated>
-	<id>{{ absolutePostUrl }}</id>
-	<content type="html">{{ post.data.feedContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  	<title>{{ post.data.title }}</title>
+  	<link href="{{ absolutePostUrl }}"/>
+  	<updated>{{ post.data.date | dateFromString | dateToRfc3339 }}</updated>
+  	<id>{{ absolutePostUrl }}</id>
+  	<content type="html">{{ post.data.feedContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
   </entry>
+    {%- endif %}
   {%- endfor %}
 </feed>

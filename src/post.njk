@@ -9,8 +9,10 @@ pagination:
 eleventyComputed:
     title: "{{ post.name }}"
     description: "{{ post.excerpt }}"
-    socialImage: "{{ post.image.src }}"
+    date: "{{ post.date }}"
     feedContent: "{{ post.html | safe }}"
+    isPublished: "{{ post.isPublished }}"
+    socialImage: "{{ post.image.src }}"
 permalink: "/{{ post.permalink }}/index.html"
 ---
 <main

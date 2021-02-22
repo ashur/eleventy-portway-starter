@@ -28,6 +28,11 @@ module.exports = config =>
 		});
 	});
 
+	config.addFilter( "dateFromString", string =>
+	{
+		return new Date( string );
+	});
+
 	config.addFilter( "slice", (array, start, end) =>
 	{
 		return array.slice( start, end );

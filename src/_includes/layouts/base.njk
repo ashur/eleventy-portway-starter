@@ -6,7 +6,7 @@
 
 	{% set pageTitle %}{% if title %}{{ title }} | {% endif %}{{ blog.name }}{% endset -%}
 	{%- set pageDescription %}{{ description if description else blog.description }}{% endset -%}
-	{%- set pageUrl %}{{ site.url }}{{ page.url }}{% endset -%}
+	{%- set pageUrl %}{{ blog.url }}{{ page.url }}{% endset -%}
 
 	<title>{{ pageTitle }}</title>
 

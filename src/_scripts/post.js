@@ -59,7 +59,7 @@ class Post
 		this.excerpt = excerpt;
 
 		/* Image */
-		if( images.length > 0 )
+		if( images.length > 0 && this.data.thumbnail !== "false" )
 		{
 			this.image = images[0];
 		}

@@ -50,7 +50,7 @@ class Page
 		this.html = md.render( this.content );
 
 		/* Image */
-		if( images.length > 0 )
+		if( images.length > 0 && this.data.thumbnail !== "false" )
 		{
 			this.image = images[0];
 		}

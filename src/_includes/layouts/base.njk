@@ -7,6 +7,7 @@
 	{% set pageTitle %}{% if title %}{{ title }} | {% endif %}{{ blog.name }}{% endset -%}
 	{%- set pageDescription %}{{ description if description else blog.description }}{% endset -%}
 	{%- set pageUrl %}{{ blog.url }}{{ page.url }}{% endset -%}
+	{%-set pageImage %}{% if socialImage %}{{ socialImage }}{% else %}{{ blog.url }}/social.png{% endif %}{% endset %}
 
 	<title>{{ pageTitle }}</title>
 
@@ -17,13 +18,13 @@
 	<meta property="og:url" content="{{ pageUrl }}">
 	<meta property="og:title" content="{{ pageTitle }}">
 	<meta property="og:description" content="{{ pageDescription }}">
-	<meta property="og:image" content="{{ socialImage }}">
+	<meta property="og:image" content="{{ pageImage }}">
 
 	<meta property="twitter:card" content="summary_large_image">
 	<meta property="twitter:url" content="{{ pageUrl }}">
 	<meta property="twitter:title" content="{{ pageTitle }}">
 	<meta property="twitter:description" content="{{ pageDescription }}">
-	<meta property="twitter:image" content="{{ socialImage }}">
+	<meta property="twitter:image" content="{{ pageImage }}">
 
 	<link rel="alternate" type="application/atom+xml" href="/feed.xml">
 

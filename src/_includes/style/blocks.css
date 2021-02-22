@@ -5,11 +5,11 @@ body {
 }
 
 .nav-items a,
-.footer-links a {
+.footer a {
 	text-decoration: none;
 }
 	.nav-items a:hover,
-	.footer-links a:hover {
+	.footer a:hover {
 		text-decoration: underline;
 	}
 

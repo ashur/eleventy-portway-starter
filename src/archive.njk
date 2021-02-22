@@ -4,34 +4,44 @@ layout: layouts/page.njk
 editLink: false
 ---
 {%- set sortedPosts = (documents.posts | sortPosts("date")) %}
-{%- set previousYear = 0 %}
-{%- set previousMonth = 0 %}
-{%- for post in sortedPosts %}
-	{%- set currentYear = post.date.getFullYear() %}
-	{%- set currentMonth = post.date.getMonth() + 1 %}
-	{%- set newMonth = currentMonth != previousMonth %}
 
-	{%- set nextPost = posts[ loop.index0 + 1 ] %}
+<div class="[ stack-lg ][][]">
+{%- set previousMonth = "" %}
+{%- for currentPost in sortedPosts %}
+	{%- set currentYYYY = currentPost.date.getFullYear() %}
+	{%- set currentMM = (currentPost.date.getMonth() + 1).toString().padStart( 2, "0" ) %}
 
-	{%- if currentYear != previousYear or currentMonth != previousMonth %}
-		<h2>{{ post.date.toLocaleDateString([], { month: "long" } ) }} {{ currentYear }}</h2>{%- endif %}
-	{%- if newMonth %}
+	{% set currentMonth %}{{ currentYYYY }}{{ currentMM }}{% endset %}
+
+	{% if currentMonth != previousMonth %}
+	<div class="[][ stack ][]">
+		<h2>{{ currentPost.date.toLocaleDateString([], { month: "long" } ) }} {{ currentYYYY }}</h2>
 		<div class="[ stack-sm ][][]">
-	{%- endif %}
-			<p>
-				<span class="[][ color-gray font-sm margin-right-0 tabular-nums uppercase ][]">
-				{% if post.isPublished %}
-					{% date post.date %}
-				{% else %}
-					Unpublished
-				{% endif %}
-				</span>
-				<a href="{{ post.permalink }}">{{ post.name }}</a>
-			</p>
-	{% if nextPost and currentMonth != (nextPost.date.getMonth() + 1) %}
-		</div>
 	{% endif %}
 
-	{%- set previousYear = currentYear %}
-	{%- set previousMonth = currentMonth %}
+	<p>
+		<span class="[][ color-gray font-sm margin-right-0 tabular-nums uppercase ][]">
+		{% if currentPost.isPublished %}
+			{% date currentPost.date %}
+		{% else %}
+			Unpublished
+		{% endif %}
+		</span>
+		<a href="{{ currentPost.permalink }}">{{ currentPost.name }}</a>
+	</p>
+
+	{%- set nextPost = sortedPosts[ loop.index0 + 1 ] %}
+	{% if nextPost %}
+		{%- set nextYYYY = nextPost.date.getFullYear() %}
+		{%- set nextMM = (nextPost.date.getMonth() + 1).toString().padStart( 2, "0" ) %}
+		{%- set nextMonth %}{{ nextYYYY }}{{ nextMM }}{% endset -%}
+
+		{% if currentMonth != nextMonth %}
+		</div>
+	</div>
+		{% endif %}
+	{% endif %}
+
+	{% set previousMonth = currentMonth %}
 {%- endfor %}
+</div>
